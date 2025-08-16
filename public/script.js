@@ -1,0 +1,1 @@
+console.log('Aplicación lista para pruebas de usabilidad.');
