@@ -15,6 +15,12 @@ mongoose.connect('mongodb://localhost:27017/prueba-de-usuarios', { useNewUrlPars
   .then(() => console.log('Base de datos conectada'))
   .catch(err => console.error('Error de conexión a la base de datos:', err));
 
+// Manejo de errores de rutas
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Algo salió mal'); // Send a 500 error if something goes wrong
+});
+
 // Rutas
 app.get('/', (req, res) => {
   res.send('API de Prueba de Usuarios App'); // Endpoint principal
