@@ -18,7 +18,7 @@ mongoose.connect('mongodb://localhost:27017/prueba-de-usuarios', { useNewUrlPars
 // Manejo de errores de rutas
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).send('Se produjo un error en el servidor'); // Send a clearer error message
+  res.status(500).send('Ocurrió un error en el servidor. Por favor, inténtelo de nuevo más tarde.'); // Send a clearer error message
 });
 
 // Rutas
