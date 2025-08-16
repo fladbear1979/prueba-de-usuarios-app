@@ -7,8 +7,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middlewares
-app.use(cors());
-app.use(bodyParser.json());
+app.use(cors()); // Enable CORS for all routes
+app.use(bodyParser.json()); // Parse JSON request bodies
 
 // Conexión a la base de datos
 mongoose.connect('mongodb://localhost:27017/prueba-de-usuarios', { useNewUrlParser: true, useUnifiedTopology: true })
@@ -17,9 +17,9 @@ mongoose.connect('mongodb://localhost:27017/prueba-de-usuarios', { useNewUrlPars
 
 // Rutas
 app.get('/', (req, res) => {
-  res.send('API de Prueba de Usuarios App');
+  res.send('API de Prueba de Usuarios App'); // Endpoint principal
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor escuchando en el puerto ${PORT}`);
+  console.log(`Servidor escuchando en el puerto ${PORT}`); // Log the server start
 });
