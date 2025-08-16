@@ -4,8 +4,8 @@
   "description": "Una aplicación web para llevar a cabo pruebas de usabilidad en prototipos de productos digitales.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node server.js", // Command to start the application
+    "dev": "nodemon server.js" // Command to start in development mode with nodemon
   },
   "dependencies": {
     "express": "^4.17.1",
